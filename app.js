@@ -1,13 +1,16 @@
 var express = require('express');
 var app = express();
 
-var path = require('path');
+app.set('view engine', 'ejs');
+
+var text = 'This is my text';
 
 app.get('/index', (req, res) => {
-  res.sendFile(path.join(__dirname + '/page1.html'));
+  res.render('page1', { mytext: text });
 });
+
 app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname + '/page2.html'));
+  res.render('page2');
 });
 
 app.listen(3000, () => {

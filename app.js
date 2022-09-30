@@ -1,9 +1,15 @@
-var http = require('http');
-var server = http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    var message = 'It works!\n',
-        version = 'NodeJS ' + process.versions.node + '\n',
-        response = [message, version].join('\n');
-    res.end(response);
+var express = require('express');
+var app = express();
+
+var path = require('path');
+
+app.get('/index', (req, res) => {
+  res.sendFile(path.join(__dirname + '/page1.html'));
 });
-server.listen();
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname + '/page2.html'));
+});
+
+app.listen(3000, () => {
+  console.log('THe server is working');
+});

@@ -3,10 +3,12 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
+var names = ['john', 'joe', 'Shakib', 'rakib'];
+
 var text = 'This is my text';
 
 app.get('/index', (req, res) => {
-  res.render('page1', { mytext: text });
+  res.render('page1', { names: names });
 });
 
 app.get('/about', (req, res) => {

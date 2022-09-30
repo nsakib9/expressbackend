@@ -13,3 +13,22 @@ SyntaxError: Unexpected token '<<'
     at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
     at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
     at Module._compile (internal/modules/cjs/loader.js:1085:14)
+ReferenceError: /home/lskiouny/subdomains/nex.lskit.com/views/page1.ejs:4
+    2| 
+    3| 
+ >> 4| <% names.forEach(function(name) {%>
+    5| 
+    6| <h1> my name is <%=  name %></h1>
+    7| 
+
+names is not defined
+    at eval (eval at compile (/home/lskiouny/nodevenv/subdomains/nex.lskit.com/14/lib/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:8)
+    at page1 (/home/lskiouny/nodevenv/subdomains/nex.lskit.com/14/lib/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/lskiouny/nodevenv/subdomains/nex.lskit.com/14/lib/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/lskiouny/nodevenv/subdomains/nex.lskit.com/14/lib/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/lskiouny/nodevenv/subdomains/nex.lskit.com/14/lib/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/lskiouny/nodevenv/subdomains/nex.lskit.com/14/lib/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/lskiouny/nodevenv/subdomains/nex.lskit.com/14/lib/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/lskiouny/nodevenv/subdomains/nex.lskit.com/14/lib/node_modules/express/lib/response.js:1039:7)
+    at /home/lskiouny/subdomains/nex.lskit.com/app.js:9:7
+    at Layer.handle [as handle_request] (/home/lskiouny/nodevenv/subdomains/nex.lskit.com/14/lib/node_modules/express/lib/router/layer.js:95:5)
